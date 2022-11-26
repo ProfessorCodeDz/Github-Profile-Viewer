@@ -1,1 +1,1 @@
-# Github-Profile-Viewer with React.js
+# Github Profile Viewer with React.js

@@ -1,0 +1,139 @@
+/*sections*/
+section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.left {
+    width: 500px;
+    height: 500px;
+    display: flex;
+}
+.left .image {
+    margin-right: 10px;
+    width: 50%;
+    height: 80%;
+    background-color: gray;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.left .image img {
+    height: 100%;
+    filter: brightness(0.5);
+}
+.left .green {
+    width: 50%;
+    height: 70%;
+    background-color: #76dcc2;
+    border-top-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.left .green h2 {
+    margin-top: 50px;
+}
+.left .green .spinner {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-color: #eceeee;
+    border-radius: 50%;
+    bottom: -30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left .green .spinner .blue {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 1px solid #00050e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left .green .spinner .blue .white {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left .green .spinner .blue .white img {
+    height: 70%;
+    transition: linear;
+    animation: spinner infinite linear 3s;
+}
+@keyframes spinner {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.right {
+    width: 500px;
+}
+.right h1 {
+    margin: 20px 40px;
+    font-size: 50px;
+}
+.right .btns {
+    margin-left: 40px;
+}
+.right button {
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    height: 50px;
+}
+.right .btns .blue {
+    background: #051320;
+    color: white;
+    width: 150px;
+    font-weight: bold;
+}
+.right .btns .white {
+    background-color: white;
+    width: 50px;
+    transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    section .left,
+    section .right {
+        width: 90%;
+    }
+
+    .left .green .spinner {
+        width: 200px;
+        height: 200px;
+    }
+    .left .green .spinner .blue {
+        width: 180px;
+        height: 180px;
+    }
+    .left .green .spinner .blue .white {
+        width: 160px;
+        height: 160px;
+    }
+    .left .green .spinner .blue .white img {
+        height: 70%;
+        transition: linear;
+        animation: spinner infinite linear 3s;
+    }
+    
+}
